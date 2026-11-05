@@ -1,0 +1,454 @@
+:root {
+    --primario: #4f46e5;
+    --secundario: #7c3aed;
+    --oscuro: #172033;
+    --gris: #64748b;
+    --fondo: #f4f6fc;
+    --blanco: #ffffff;
+    --borde: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    color: var(--oscuro);
+    background: var(--fondo);
+    line-height: 1.6;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1150px;
+    margin: auto;
+}
+
+/* =====================================
+   ENCABEZADO
+===================================== */
+
+.encabezado {
+    background: var(--blanco);
+    padding: 18px 0;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primario);
+}
+
+.enlace-registro {
+    text-decoration: none;
+    color: var(--primario);
+    font-weight: bold;
+}
+
+.enlace-registro:hover {
+    color: var(--secundario);
+}
+
+/* =====================================
+   LOGIN Y REGISTRO
+===================================== */
+
+.pagina-acceso {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    background:
+        radial-gradient(circle at top left,
+            #e0e7ff, transparent 45%),
+        radial-gradient(circle at bottom right,
+            #ede9fe, transparent 45%),
+        var(--fondo);
+}
+
+.tarjeta-acceso {
+    width: 100%;
+    max-width: 460px;
+    padding: 42px 38px;
+    border-radius: 20px;
+    background: var(--blanco);
+    box-shadow: 0 15px 45px rgba(31, 41, 55, 0.10);
+    text-align: center;
+}
+
+.icono-acceso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 22px;
+    border-radius: 16px;
+    background: linear-gradient(
+        135deg,
+        var(--primario),
+        var(--secundario)
+    );
+    color: white;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.tarjeta-acceso h1 {
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.subtitulo {
+    color: var(--gris);
+    font-size: 15px;
+    margin-bottom: 28px;
+}
+
+/* =====================================
+   FORMULARIOS
+===================================== */
+
+.grupo-formulario {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.grupo-formulario input {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    font-size: 15px;
+    background: #ffffff;
+    transition: border-color 0.2s;
+}
+
+.grupo-formulario input:focus {
+    outline: 2px solid rgba(79, 70, 229, 0.15);
+    border-color: var(--primario);
+}
+
+.boton-principal {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        var(--primario),
+        var(--secundario)
+    );
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.boton-principal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(79,70,229,0.25);
+}
+
+.texto-registro {
+    margin-top: 25px;
+    color: var(--gris);
+    font-size: 14px;
+}
+
+.texto-registro a {
+    color: var(--primario);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* =====================================
+   MENSAJES DE ERROR Y EXITO
+===================================== */
+
+.alerta {
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.alerta.exito {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+.alerta.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+/* =====================================
+   PANEL PRINCIPAL
+===================================== */
+
+.panel-contenedor {
+    flex: 1;
+    width: 90%;
+    max-width: 1150px;
+    margin: 45px auto 70px;
+}
+
+.panel-bienvenida {
+    padding: 45px;
+    border-radius: 20px;
+    background: linear-gradient(
+        135deg,
+        #4338ca,
+        #7c3aed
+    );
+    color: white;
+}
+
+.etiqueta-panel {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.panel-bienvenida h1 {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.panel-bienvenida p {
+    max-width: 650px;
+}
+
+/* =====================================
+   RESUMEN DE USUARIO
+===================================== */
+
+.panel-resumen {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.tarjeta-resumen {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+}
+
+.tarjeta-resumen h3 {
+    font-size: 15px;
+    color: var(--gris);
+    margin-bottom: 10px;
+}
+
+.tarjeta-resumen p {
+    overflow-wrap: anywhere;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.tarjeta-resumen .numero-resumen {
+    color: var(--primario);
+    font-size: 35px;
+}
+
+/* =====================================
+   TARJETAS DE MODULOS
+===================================== */
+
+.seccion-modulos {
+    margin-top: 55px;
+}
+
+.seccion-modulos h2 {
+    font-size: 29px;
+    margin-bottom: 8px;
+}
+
+.descripcion-modulos {
+    color: var(--gris);
+    margin-bottom: 30px;
+}
+
+.grid-modulos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.modulo-card {
+    background: white;
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.modulo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+}
+
+.numero-modulo {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: var(--primario);
+    margin-bottom: 16px;
+}
+
+.modulo-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.modulo-card p {
+    font-size: 14px;
+    color: var(--gris);
+    margin-bottom: 20px;
+    min-height: 65px;
+}
+
+.categoria {
+    display: inline-block;
+    background: #f1f5f9;
+    color: #475569;
+    padding: 7px 13px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.categoria.destacada {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.mensaje-vacio {
+    padding: 30px;
+    background: white;
+    text-align: center;
+    border-radius: 12px;
+    color: var(--gris);
+}
+
+/* =====================================
+   CERRAR SESION
+===================================== */
+
+.boton-salir {
+    border: 1px solid #fecaca;
+    color: #dc2626;
+    background: #fff1f2;
+    padding: 10px 17px;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.boton-salir:hover {
+    background: #fee2e2;
+}
+
+/* =====================================
+   PIE DE PAGINA
+===================================== */
+
+.pie-pagina {
+    background: var(--oscuro);
+    color: white;
+    text-align: center;
+    padding: 23px;
+    font-size: 13px;
+}
+
+/* =====================================
+   DISEÑO ADAPTABLE
+===================================== */
+
+@media (max-width: 900px) {
+
+    .grid-modulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .tarjeta-acceso {
+        padding: 30px 23px;
+    }
+
+    .tarjeta-acceso h1 {
+        font-size: 24px;
+    }
+
+    .panel-contenedor {
+        margin-top: 25px;
+    }
+
+    .panel-bienvenida {
+        padding: 30px 22px;
+    }
+
+    .panel-bienvenida h1 {
+        font-size: 27px;
+    }
+
+    .panel-resumen,
+    .grid-modulos {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-modulos h2 {
+        font-size: 25px;
+    }
+
+    .modulo-card p {
+        min-height: auto;
+    }
+}
